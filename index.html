@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="imagenes/dom duc.svg">
+    <title>DOM | Document Object Model</title>
+</head>
+<body>
+    <i class="bi bi-archive"></i>
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#dom">DOM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#dom">Qué es DOM?
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#estructura">Estructura</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#propiedades">Propiedades clave</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#importancia">Importancia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#conclusion">Conclusión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagenes/dom5.png" class="d-block w-100" alt="..." style="height: 670px;">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/dom3.jpg" class="d-block w-100" alt="..." style="height: 670px;">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/dom1.png" class="d-block w-100" alt="..." style="height: 670px;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <div class="container-fluid">
+        <div class="row" style="padding: 50px ;text-align: center;background-color: lightsalmon;">
+            <h2 style="color: black;" id="dom">Qué es el DOM ?</h2>
+            <p>El DOM (Document Object Model) es una interfaz de programación que representa la estructura de un documento HTML o XML como un árbol jerárquico de nodos. Permite a los lenguajes de programación, como JavaScript, interactuar y manipular dinámicamente el contenido, la estructura y el estilo de una página web.</p>
+        </div>
+        <div class="row" style="padding: 50px;text-align: center;background-color: lightgray;">
+            <h2 style="color: black;" id="estructura">Estructura del DOM</h2>
+            <p>Nodos: Cada elemento, atributo, texto o comentario en el documento es un nodo.</p>
+            <div class="col">
+                <h3>Nodo raíz</h3>
+                <p>Representa el documento completo (por ejemplo, html en HTML).</p>
+            </div>
+            <div class="col">
+                <h3>Nodos de elemento</h3>
+                <p>Representan las etiquetas HTML, como div,p, etc..</p>
+            </div>
+            <div class="col">
+                <h3>Nodos de texto</h3>
+                <p>Contienen el contenido textual dentro de las etiquetas.</p>
+            </div>
+            <div class="col">
+                <h3>Nodos de atributo</h3>
+                <p>Representan los atributos de las etiquetas HTML, como id o class.</p>
+            </div>
+            <div class="col">
+                <h3>Nodos de comentario</h3>
+                <p>Representan los comentarios en el código HTML (<!-- comentario -->).</p>
+            </div>
+        </div>
+        <div class="row" style="padding: 50px;text-align: center;background-color: bisque;">
+            <h2 style="color: black;" id="propiedades">Propiedades Clave</h2>
+            <div class="col">
+                <h3>Jerarquía</h3>
+                <p>Los nodos tienen relaciones como padre, hijo y hermanos. Esto permite navegar por el árbol del DOM.</p>
+            </div>
+            <div class="col">
+                <h3>Accesibilidad</h3>
+                <p>El DOM es accesible mediante lenguajes de programación como JavaScript, lo que permite manipular la página en tiempo real.</p>
+            </div>
+        </div>
+        <div class="row" style="padding: 50px;text-align: center;background-color: aquamarine;">
+            <h2 style="color: black;" id="funcionalidades">Funcionalidades</h2>
+            <div class="col">
+                <h3>Lectura del contenido</h3>
+                <p>Se puede acceder a cualquier nodo o elemento del documento.</p>
+            </div>
+            <div class="col">
+                <h3>Modificación</h3>
+                <p>Permite:Cambiar el contenido de un nodo, Modificar atributos, como clases o estilos, Agregar o eliminar nodos.</p>
+            </div>
+            <div class="col">
+                <h3>Creación dinámica</h3>
+                <p>Se pueden crear elementos y estructuras HTML dinámicamente</p>
+            </div>
+            <div class="col">
+                <h3>Manipulación de estilos</h3>
+                <p>Cambiar estilos CSS directamente desde el script.</p>
+            </div>
+            <div class="col">
+                <h3>Interactividad</h3>
+                <p>Capturar eventos (como clics, movimientos del mouse, etc.) y responder a ellos.</p>
+            </div>
+        </div>
+        <div class="row" style="padding-left: 100px; background-color: antiquewhite;">
+            <h3 style="text-align: center;color: black;" id="importancia">Importancia</h3>
+            <p>El DOM es fundamental para la creación de aplicaciones web interactivas. Gracias a él, los desarrolladores pueden:</p>
+            <ul style="padding-left: 200px;">
+                <li>Actualizar el contenido de las páginas sin necesidad de recargarlas.</li>
+                <li>Crear experiencias de usuario dinámicas y personalizadas.</li>
+                <li>Vincular interacciones de usuario con cambios en el contenido o diseño.</li>
+            </ul>
+        </div>
+        <div class="row" style="padding: 100px;background-color: aqua;">
+            <h3 style="text-align: center;color: black;" id="conclusion">Conclución</h3>
+            <p>El DOM es la puerta de entrada para que los desarrolladores web interactúen y modifiquen los documentos HTML o XML de manera estructurada y programable. Su comprensión es esencial para el desarrollo de aplicaciones web modernas y dinámicas.</p>
+        </div>
+    </div>
+</body>
+</html>
